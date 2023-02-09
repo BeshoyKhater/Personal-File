@@ -43,6 +43,12 @@
         &_buttonGroup {
             @include flex(center, center, center);
 
+            #down {
+                .button_bic {
+                    position: absolute;
+                }
+            }
+
             button {
                 margin: 2px;
             }
