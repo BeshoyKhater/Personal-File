@@ -1,0 +1,34 @@
+.wrap {
+    background: $lightblue;
+    margin-bottom: 2rem;
+    .type-wrap {  
+        padding: 1rem;  
+            margin-left: 22%;
+            font-size: 2rem;
+            font-weight: bold;
+            span {
+                color:$primary;
+            }
+            .Im {
+                margin-right: .5rem;
+                color: $indigo;
+            }
+        }
+}
+
+@include media-lg {
+    .wrap {
+            .type-wrap {
+                margin-left: 10%;
+            }
+        }
+}
+
+@include media-md {
+    .wrap {
+            .type-wrap {
+                margin-left: 5%;
+                font-size: 1.3rem;
+            }
+        }
+}

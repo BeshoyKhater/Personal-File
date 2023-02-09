@@ -1,0 +1,83 @@
+.projects {
+    .buttons {
+        display: flex;
+        place-content: center;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+
+        .Btn {
+            &.active {
+                background: $primary;
+                color: $white;
+            }
+        }
+    }
+    .Card {
+        @include cards(20px, $lightblue, $hover: true);
+        
+        .image {
+            overflow: hidden;
+            position: relative;
+            img {
+                transition: all 400ms ease;
+            }
+        }
+
+        &:hover img {
+            border-radius: 1rem;
+        }
+
+        &:hover .buttons__project {
+            left: 0;
+        }
+
+        &:hover {
+            border-color: $primary;
+        }
+
+        .buttons__project {
+            transition: all 1s ease;
+            position: absolute;
+            top:50%;
+            left: -30%;
+            transform: translateY(-50%);
+            background:rgba($color:$primary, $alpha: .8);
+            padding:.5rem 0;
+            border-radius: 0 1rem 1rem 0;
+            
+
+            a {
+                display: block;
+                padding: .3rem .4rem;
+                svg {
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        .details {
+            margin-top: 1.5rem;
+            h6 {
+                color: $primary;
+                margin-top:1rem;
+            }
+        }
+    }
+}
+
+
+@include media-md {
+.projects {
+        .buttons {
+            gap: .5rem;
+            
+            .Btn {
+                padding: 0.5rem 1.5rem;
+            }
+        }
+    }
+}

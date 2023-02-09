@@ -1,0 +1,68 @@
+.Progress {
+    background-color: $gray-dark;
+    border-radius: 20px;
+    position: relative;
+    margin: 50px 0;
+    height: 5px;
+    width: 80%;
+    margin-left: 40px;
+
+    &_done {
+        border-radius: 20px;
+        color: #fff;
+        height: 100%;
+        width: 0;
+        opacity: 0;
+        @include transition;
+    }
+
+    &_num {
+        h4 {
+            position: absolute;
+            color: $indigo;
+            top: -25px;
+            left: -40px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    &_title {
+        @include absolute;
+        top: -30px;
+
+        h3 {
+            color: $gray;
+            font-weight: 500;
+            font-size: 17px;
+        }
+    }
+}
+
+// media query ("tablet")
+@include media-lg {
+.Progress {
+    margin-left: 35px;
+    &_title {
+        h3 {
+            font-size: 15px;
+        }
+    }
+}
+}
+
+// media query ("phone")
+@include media-md {
+.Progress {
+        margin-left: 40px;
+
+        &_title {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+ .text-slider-items {
+     display: none;
+ }

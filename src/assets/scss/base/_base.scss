@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background: url("../../images/bg.png") no-repeat fixed top center $blue;
+  color: set-text-color($white);
+  font-family: $font-family-sans-serif;
+}
+
+a {
+  @include defaultValue;
+  @include transition;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+ul,
+button {
+  @include defaultValue;
+}
+
+.main-div {
+  padding: $p-xl;
+}
+
+.side {
+  background-color: $lightblue;
+  @include shadow;
+  height: fit-content;
+  position: sticky;
+  top: 1.5rem;
+  left: 0;
+}
+
+
+.button {
+  @include button($indigo, map-get($sizes, 2xl), map-get($sizes, sm), map-get($sizes, sm), $primary);
+}
+
+.Btn {
+  @include Btn;
+}
+
+.sm_button {
+  @include button($primary, map-get($sizes, sm), map-get($sizes, sm), map-get($sizes, sm), $indigo);
+
+  span {
+    margin: 0;
+  }
+}
+
+.container {
+  @include shadow;
+  padding: 30px;
+  background: $black;
+  margin-top: 30px;
+}
+
+.icon {
+  @include icons(60px, 60px, $indigo, 22px, 60px, $primary);
+}
+
+.pages {
+  @extend .container;
+  height: 90vh;
+  font-size: 50px;
+  color: $primary;
+}
+
+// Media Query ("tablet")
+@include media-lg {
+  .main-div {
+      padding: $p-lg;
+  }
+      h1 {
+        font-size: 1.5rem;
+      }
+  
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      h3,h4 {
+        font-size: 1rem;
+      }
+
+      h5,h6 {
+        font-size: .9rem;
+      }
+
+      // span {
+      //   font-size: 14px;
+      // }
+}
+
+// Media Query ("phone")
+@include media-md {
+  .main-div {
+    padding: $p-md;
+  }
+}

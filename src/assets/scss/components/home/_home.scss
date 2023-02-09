@@ -1,0 +1,130 @@
+.about {
+    &_details {
+        &_content {
+            margin-bottom: 4rem;
+            &_box {
+                @include flex(none, center, none);
+
+                &_text {
+                    margin-left: 20px;
+
+                    h4 {
+                        font-weight: 500;
+                    }
+
+                    span {
+                        color: $lightgray;
+                    }
+                }
+            }
+        }
+    }
+
+    &_services {
+        &_boxs {
+            .Card {
+                @include cards(20px, $lightblue, $hover: true);
+            }
+
+            .icon {
+                @include icons(70px, 70px, $black, 25px, 70px, $indigo);
+                color: $indigo;
+                margin-bottom: .5rem;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &_sider {
+        position: relative;
+        margin: 50px 0;
+        width: 100%;
+
+        &_content {
+            .Card {
+                @include cards(30px 0, none, $hover: false);
+                @include flex(space-between, none, none);
+                position: relative;
+
+                img {
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    margin-right: 30px;
+                }
+
+                &::after {
+                    content: "❝";
+                    position: absolute;
+                    @include flex(center, center, center);
+                    font-size: 40px;
+                    bottom: 25px;
+                    width: 60px;
+                    height: 60px;
+                    background: url("../../../images/back.png");
+                    background-size: contain;
+                }
+
+                p {
+                    font-style: italic;
+                }
+            }
+
+            &_slideButton {
+                width: 100%;
+                @include absolute;
+                left: 0;
+
+                button {
+                    float: right;
+                    @include icons(40px, 40px, $primary, 22px, 16px, $indigo);
+                    border-radius: 0;
+                    margin: 5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+.about {
+    &_details {
+            &_content {
+                &_box {
+                    &_text {
+                        margin-left: 10px;
+                    }
+                }
+            }
+    }
+}
+}
+
+
+@include media-md {
+    .about {
+        &_sider {
+            &_content {
+                .Card {
+                    text-align: center;
+                    display: block;
+                }
+    
+                &_slideButton {
+                    top: 131px;
+                    flex-direction: row-reverse;
+                    display: flex;
+                    justify-content: space-between;
+    
+                    button {
+                        float:none;
+                    }
+                }
+            }
+        }
+}
+}

@@ -1,0 +1,133 @@
+.container__contact {
+    .side__contact {
+        padding: 1rem 2rem;
+
+        .aside__image {
+            img {
+                width: 80%;
+            }
+        }
+
+        p {
+            color:rgb(232, 228, 228) ;
+        }
+
+        h2 {
+            span {
+                color: slateblue;
+            }
+        }
+
+        .contact__details {
+            li {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                svg {
+                    color: slateblue;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .contact__socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            li {
+                a {
+                    svg {
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        color: slateblue;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .container__form {
+        padding: 2rem;
+
+        form {
+            .form__name {
+                display: flex;
+                gap: 1.2rem;
+
+                input[type='text'] {
+                    width: 50%;
+                }
+            } 
+
+            input,textarea {
+                width: 100%;
+                padding: 1rem;
+                background: $lightblue;
+                color: $white;
+                resize:min(5rem);
+                margin-bottom: 1rem;
+                outline: none;
+                border: none;
+
+                &::placeholder {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Media Query ("tablet")
+@include media-lg {
+.container__contact {
+        .side__contact {
+            padding:1rem 0;
+
+            .aside__image {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .container__form {
+            padding: 0;
+            padding-top: 2rem;
+        }
+}
+}
+
+// Media Query ("phone")
+@include media-md {
+.container__contact {
+    .side__contact {
+            padding: 1rem 0;
+
+            .aside__image {
+                padding-bottom: 1rem;
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        .container__form {
+            padding: 0;
+            padding-top: 2rem;
+
+        form {
+            .form__name {
+                display: block;
+    
+                input[type='text'] {
+                    width: 100%;
+                }
+            }
+        }
+        }
+    }
+}

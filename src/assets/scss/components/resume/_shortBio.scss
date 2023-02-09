@@ -1,0 +1,16 @@
+.about_details_bio {
+    margin: 50px 0;
+
+    &_box {
+        p {
+            color: $lightgray;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        &_image {
+            place-self: center;
+
+        }
+    }
+}

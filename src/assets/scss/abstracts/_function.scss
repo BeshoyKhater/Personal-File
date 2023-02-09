@@ -1,0 +1,52 @@
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #fff;
+    }
+
+    @else {
+        @return #000;
+    }
+}
+
+$sizes: (
+    "sm": 50px,
+    "md": 60px,
+    "lg": 70px,
+    "2xl": 160px,
+);
+@function icon($size, $line-height) {
+    @return map-get($sizes, $size);
+    @return map-get($sizes, $line-height);
+}
+
+$colors: (
+  facebook: #1773ea,
+  github: #009deb,
+  linkedin: #ea4c89,
+  instagram: #d62977,
+);
+
+@each $name,
+$color in $colors {
+  .#{$name} {
+    @include icons(50px, 50px, #ff43cb, 18px, 50px, $primary);
+    background: $color;
+    margin: 5px;
+  }
+}
+
+$backgrounds: (
+    skill1: linear-gradient(to right, #ff43cb, #ff56a1, #ff7882, #ff9a74, #feb779),
+    skill2: linear-gradient(to right, #806dfa, #009eff, #00c1ff, #00dcf8, #6ef2e1),
+    skill3: linear-gradient(to right, #8865dd, #9c63dc, #ae62d9, #bf60d6, #cf5ed2),
+    skill4: linear-gradient(to right, #A7727D, #EDDBC7, #F8EAD8, #F9F5E7, #F9F5E7),
+    skill5: linear-gradient(to right, #F55050, #F48484, #E8D2A6, #86A3B8, #806dfa),
+    skill6: linear-gradient(to right, #8865dd, #9c63dc, #ae62d9, #bf60d6, #cf5ed2),
+    skill7: linear-gradient(to right, #ff7882, #F9F5E7, #ae62d9, #009eff, #cf5ed2),
+);
+
+@each $skill, $background in $backgrounds {
+    .#{$skill} {
+        background: $background;
+    }
+}

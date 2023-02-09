@@ -1,0 +1,28 @@
+.skills {
+    margin-top: 5rem;
+    .bottom_skill {
+        .skill_box {
+            // padding: 0 2rem;
+            .Progress {
+                margin-left:2rem;
+                width: 90%;
+                height: 15px;
+
+                    &_num {
+                            h4 {
+                                top: -18px;
+                                font-size: 20px;
+                            }
+                        }
+                    &_title {
+                            top: -30px;
+                            
+                        h3 {
+                            font-weight: bold;
+                            color: $white;
+                        }
+                    }
+            }
+        }
+    }
+}

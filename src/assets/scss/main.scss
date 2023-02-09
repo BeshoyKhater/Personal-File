@@ -1,0 +1,52 @@
+// 1. abstracts
+@import
+  'abstracts/variables',
+  'abstracts/mixin',
+  'abstracts/function';
+
+
+// 2. Base stuff
+@import
+  'base/base',
+  'base/fonts';
+
+
+
+// 3. common 
+@import
+  'common/header',
+  'common/heading',
+  'common/TypingAnimation';
+
+
+// 4. Components
+@import
+  //side content
+  'components/side/side',
+  'components/side/progress',
+
+  //home page
+  'components/home/home',
+
+  //portfolio
+  'components/portfolio/portfolioProject',
+
+  //contact
+  'components/contact/contact',
+
+  //resume
+  'components/resume/shortBio',
+  'components/resume/skill';
+
+
+
+// 5. Themes
+@import
+  'themes/default';
+
+
+
+// Import Swiper styles
+// @import 'swiper/scss';
+// @import 'swiper/scss/pagination';
+// @import 'swiper/scss/navigation';

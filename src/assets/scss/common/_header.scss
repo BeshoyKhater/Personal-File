@@ -1,0 +1,136 @@
+header {
+    @include shadow;
+    @include flex(space-between, none, center);
+    background-color: $black;
+
+    ul {
+        width: $w-4xl;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        padding: 30px;
+
+        li {
+            position: relative;
+
+            a {
+                text-transform: capitalize;
+                font-size: 15px;
+                font-weight: 500;
+                @include z-index;
+            }
+
+            span {
+                color: $indigo;
+                @include absolute;
+                font-size: 50px;
+                top: -30px;
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+.icons {
+    width: $s;
+    background: $lightDark;
+    place-items: center;
+
+    button {
+        font-size: 45px;
+    }
+}
+
+// media query ("tablet")
+@include media-lg {
+    header {
+        ul {
+            gap: 2rem;
+
+            li {
+                position: relative;
+
+                span {
+                    top: -35px;
+                }
+            }
+        }
+    }
+
+    .icons {
+        width: 15%;
+    }
+}
+
+// media query ("phone")
+@include media-md {
+    header {
+        .menu {
+            display: none;
+        }
+
+        .mobile-nav {
+            display: block;
+            z-index: 999;
+            position: absolute;
+            top: 6rem;
+            right: 5%;
+            width: 20rem;
+            flex-direction: column;
+
+            span {
+                display: none;
+            }
+
+            li {
+                width: 100%;
+                height: 5.8rem;
+                animation: animateNavItem 400ms linear forwards;
+                transform-origin: top right;
+                opacity: 0;
+
+                a {
+                    font-size: 20px;
+                    background:$black;
+                    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.4);
+                    width: 100%;
+                    height: 100%;
+                    display: grid;
+                    place-items: center;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 200ms;
+                }
+                &:nth-child(3) {
+                    animation-delay: 400ms;
+                }
+                &:nth-child(4) {
+                    animation-delay: 600ms;
+                }
+                &:nth-child(5) {
+                    animation-delay: 800ms;
+                }
+            }
+            @keyframes animateNavItem {
+                0% {
+                    transform: rotateZ(-90deg)rotateX(90deg) scale(0.1);
+                }
+                100% {
+                    transform: rotate(0)rotateX(0) scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .icons {
+            @include absolute;
+            z-index: 10000;
+            top: 40px;
+            left: 78%;
+            background: none;
+        }
+    }
+}
+
