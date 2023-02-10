@@ -5,20 +5,24 @@ import {Link} from "react-router-dom"
 import {menu} from "../data/data"
 
 const Header = () => {
-
     const [mobile,setMobile]=useState(false)
+    const [path, setPath] = useState(false);
 
     useEffect(() => {
     if (window.innerWidth > 778) {
       setMobile(false);
     }}, []);
 
-    function handleScroll(id){
-        if (window.innerWidth < 778) {
-            window.location.replace(id)
+    useEffect(() => {
+    if (window.innerWidth < 778) {
+        const element = document.getElementById(path);
+        if (element) {
+          // 👇 Will scroll smoothly to the top of the next section
+          element.scrollIntoView({ behavior: "smooth" });
         }
-        setMobile(false)
-    }
+      }
+      setMobile(false);
+  }, [path]);
 
     function handleClick() {
         if (window.innerWidth < 778) {
@@ -32,7 +36,7 @@ const Header = () => {
             <ul className={`${mobile ? "mobile-nav" : "menu"}`}>
                 {menu.map((item)=>(
                     <li key={item.url}>
-                        <Link to={item.url} className='link' onClick={()=>handleScroll(item.location)} >{item.text}</Link>
+                        <Link to={item.url} className='link' onClick={()=>setPath(item.location)} >{item.text}</Link>
                         <span>{item.icon}</span>
                     </li>
                 ))}

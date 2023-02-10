@@ -38,12 +38,12 @@ const SideContent = () => {
             </div>
 
             <div className="sideContent_bottom_buttonGroup">
-                    <a download href='https://drive.google.com/u/0/uc?id=1SrNrCbPKiqxVn182sAHgWRZxF0isnkNJ&export=download'>
+                    <a download href='https://drive.google.com/u/0/uc?id=1fRbzfT1mPMj4Z4wX3A69ZVroFAf5lH_c&export=download'>
                         <button id='down' className="sm_button">
                             <FiDownloadCloud className='button_bic'/>
                         </button>
                     </a>
-                    <a href='https://drive.google.com/file/d/1SrNrCbPKiqxVn182sAHgWRZxF0isnkNJ/view'target="_blank" rel="noreferrer" >
+                    <a href='https://drive.google.com/file/d/1fRbzfT1mPMj4Z4wX3A69ZVroFAf5lH_c/view'target="_blank" rel="noreferrer" >
                         <button className="button">
                             <RiMoneyDollarCircleLine className='button_bic'/>
                             <span >HIRE ME</span>
