@@ -22,8 +22,8 @@ const Pages = () => {
 
                 <div className='col-lg-8 col-md-8'>
                     <main>
+                        <Header/>
                         <HashRouter>
-                            <Header/>
                             <Routes>
                                 <Route index path='/' element={<Home />} />
                                 <Route path='/resume' element={<Resume />} />
