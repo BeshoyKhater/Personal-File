@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../common/Header'
-import { BrowserRouter,Routes , Route } from "react-router-dom"
+import { HashRouter,Routes , Route } from "react-router-dom"
 import Home from '../components/Home'
 import Resume from '../components/Resume'
 import Portfolio from '../components/Portfolio'
@@ -22,7 +22,7 @@ const Pages = () => {
 
                 <div className='col-lg-8 col-md-8'>
                     <main>
-                        <BrowserRouter>
+                        <HashRouter>
                             <Header/>
                             <Routes>
                                 <Route index path='/' element={<Home />} />
@@ -30,7 +30,7 @@ const Pages = () => {
                                 <Route path='/portfolio' element={<Portfolio />} />
                                 <Route path='/contact' element={<Contact />} />
                             </Routes>
-                        </BrowserRouter>
+                        </HashRouter>
                     </main>
                 </div>
             </Row>
