@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Personal-File/static/css/main.8ae09497.css",
-    "main.js": "/Personal-File/static/js/main.4c43712a.js",
+    "main.js": "/Personal-File/static/js/main.b2a2598d.js",
     "static/media/bg.png": "/Personal-File/static/media/bg.6c38745bcd77e803fb6e.png",
     "static/media/cart.jpg": "/Personal-File/static/media/cart.73e700c32e3742d52b53.jpg",
     "static/media/Avada2.jpg": "/Personal-File/static/media/Avada2.ed2562e4c638bd4f7ba7.jpg",
@@ -12,6 +12,7 @@
     "static/media/health-care.jpg": "/Personal-File/static/media/health-care.3b1a64e48184f37df5df.jpg",
     "static/media/Personal-File.jpg": "/Personal-File/static/media/Personal-File.3c1cd2245f8ea4af7ae2.jpg",
     "static/media/sport-site.jpg": "/Personal-File/static/media/sport-site.887d38ea95da8abec126.jpg",
+    "static/media/e-commerce.jpg": "/Personal-File/static/media/e-commerce.9d655fcbf7a06cbd9be9.jpg",
     "static/media/develop-your-skills.jpg": "/Personal-File/static/media/develop-your-skills.0d1fb546ac1a3f783ab7.jpg",
     "static/media/avatar5.jpg": "/Personal-File/static/media/avatar5.d25e9a28e32aa5201afa.jpg",
     "static/media/iphone.jpg": "/Personal-File/static/media/iphone.8a307fa74488c8f4d341.jpg",
@@ -19,10 +20,10 @@
     "static/media/contact.svg": "/Personal-File/static/media/contact.eb650f9f2655f79764587dfd87985d08.svg",
     "index.html": "/Personal-File/index.html",
     "main.8ae09497.css.map": "/Personal-File/static/css/main.8ae09497.css.map",
-    "main.4c43712a.js.map": "/Personal-File/static/js/main.4c43712a.js.map"
+    "main.b2a2598d.js.map": "/Personal-File/static/js/main.b2a2598d.js.map"
   },
   "entrypoints": [
     "static/css/main.8ae09497.css",
-    "static/js/main.4c43712a.js"
+    "static/js/main.b2a2598d.js"
   ]
 }
